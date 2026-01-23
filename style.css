@@ -127,5 +127,28 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
 }
+body.bio-background {
+  position: relative;
+  min-height: 100vh;
+  background: #000;
+  overflow-x: hidden;
+}
+
+body.bio-background::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("photo-accueil.jpg.jpg") center/cover no-repeat;
+  filter: blur(10px);
+  transform: scale(1.08);
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  body.bio-background::before {
+    position: absolute;
+  }
+}
+
 
 
