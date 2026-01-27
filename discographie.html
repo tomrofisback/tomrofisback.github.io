@@ -20,8 +20,8 @@
         <!-- 1991 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="wildpigs1.jpg">
-            <img class="neon-img" src="wildpigs2.jpg">
+            <img class="neon-img zoomable" src="wildpigs1.jpg">
+            <img class="neon-img zoomable" src="wildpigs2.jpg">
           </div>
           <h3 class="album-title">TOMROF</h3>
           <p class="album-year">1991</p>
@@ -30,8 +30,8 @@
         <!-- 2001 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="severes1.jpg">
-            <img class="neon-img" src="severes2.jpg">
+            <img class="neon-img zoomable" src="severes1.jpg">
+            <img class="neon-img zoomable" src="severes2.jpg">
           </div>
           <h3 class="album-title">TOMROF</h3>
           <p class="album-year">2001</p>
@@ -40,8 +40,8 @@
         <!-- 2003 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="severes3.jpg">
-            <img class="neon-img" src="severes4.jpg">
+            <img class="neon-img zoomable" src="severes3.jpg">
+            <img class="neon-img zoomable" src="severes4.jpg">
           </div>
           <h3 class="album-title">TOMROF</h3>
           <p class="album-year">2003</p>
@@ -50,7 +50,7 @@
         <!-- 2012 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="Soan1.PNG">
+            <img class="neon-img zoomable" src="Soan1.PNG">
           </div>
           <h3 class="album-title">TOMROF</h3>
           <p class="album-year">2012</p>
@@ -59,7 +59,7 @@
         <!-- 2022 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="soan2.PNG">
+            <img class="neon-img zoomable" src="soan2.PNG">
           </div>
           <h3 class="album-title">TOMROF</h3>
           <p class="album-year">2022</p>
@@ -68,8 +68,8 @@
         <!-- 2024 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="aldo1.jpg">
-            <img class="neon-img" src="aldo2.jpg">
+            <img class="neon-img zoomable" src="aldo1.jpg">
+            <img class="neon-img zoomable" src="aldo2.jpg">
           </div>
           <h3 class="album-title">TOMROF</h3>
           <p class="album-year">2024</p>
@@ -78,8 +78,8 @@
         <!-- 2025 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="aldo3.jpg">
-            <img class="neon-img" src="aldo4.jpg">
+            <img class="neon-img zoomable" src="aldo3.jpg">
+            <img class="neon-img zoomable" src="aldo4.jpg">
           </div>
           <h3 class="album-title">TOMROF</h3>
           <p class="album-year">2025</p>
@@ -95,8 +95,8 @@
         <!-- COMPILATION 2021 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="tc1.jpg">
-            <img class="neon-img" src="tc2.jpg">
+            <img class="neon-img zoomable" src="tc1.jpg">
+            <img class="neon-img zoomable" src="tc2.jpg">
           </div>
           <h3 class="album-title">Compilation</h3>
           <p class="album-year">2021</p>
@@ -105,8 +105,8 @@
         <!-- COMPILATION 2025 -->
         <div class="album-card neon-frame">
           <div class="album-images horizontal">
-            <img class="neon-img" src="TC3.jpg">
-            <img class="neon-img" src="tc4.jpg">
+            <img class="neon-img zoomable" src="TC3.jpg">
+            <img class="neon-img zoomable" src="tc4.jpg">
           </div>
           <h3 class="album-title">Compilation</h3>
           <p class="album-year">2025</p>
@@ -117,6 +117,27 @@
     </main>
 
   </div>
+
+  <!-- LIGHTBOX ZOOM -->
+  <div id="lightbox">
+    <img src="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
 
 </body>
 </html>
