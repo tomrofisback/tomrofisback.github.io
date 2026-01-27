@@ -26,7 +26,7 @@ h1, h2, h3, p {
 }
 
 /* ------------------------------
-   TITRES NÉON (TEXTE QUI CLIGNOTE)
+   TITRES NÉON (TEXTE QUI PULSE)
 ------------------------------ */
 
 .bio-name,
@@ -34,16 +34,6 @@ h1, h2, h3, p {
 .album-year {
   color: #ff66cc;
   text-shadow: 0 0 15px #ff66cc;
-  animation: neonText 2s infinite ease-in-out;
-}
-
-/* Sous-titre accueil */
-.home-subtitle {
-  text-align: center;
-  font-size: 1.4em;
-  color: #ff66cc;
-  margin-bottom: 40px;
-  text-shadow: 0 0 10px #ff66cc;
   animation: neonText 2s infinite ease-in-out;
 }
 
@@ -88,7 +78,7 @@ h1, h2, h3, p {
   text-align: center;
 }
 
-/* Cadre néon FIXE (ne clignote pas) */
+/* Cadre néon FIXE */
 .neon-frame {
   border: 3px solid #ff66cc;
   box-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc55;
@@ -143,6 +133,7 @@ h1, h2, h3, p {
   font-weight: bold;
   box-shadow: 0 0 10px #ff66cc;
   transition: 0.2s;
+  animation: neonText 2s infinite ease-in-out; /* TEXTE QUI PULSE */
 }
 
 .neon-btn:hover {
@@ -160,6 +151,7 @@ h1, h2, h3, p {
   height: 40px;
   filter: drop-shadow(0 0 10px #ff66cc);
   margin: 0 10px;
+  display: inline-block;
 }
 
 /* ------------------------------
@@ -192,13 +184,7 @@ h1, h2, h3, p {
 ------------------------------ */
 
 @keyframes neonText {
-  0% {
-    text-shadow: 0 0 10px #ff66cc;
-  }
-  50% {
-    text-shadow: 0 0 25px #ff66cc;
-  }
-  100% {
-    text-shadow: 0 0 10px #ff66cc;
-  }
+  0% { text-shadow: 0 0 10px #ff66cc; }
+  50% { text-shadow: 0 0 25px #ff66cc; }
+  100% { text-shadow: 0 0 10px #ff66cc; }
 }
