@@ -282,3 +282,51 @@ body.videos-background::before {
     height: 28px;
   }
 }
+.discography-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.album-card {
+  background: #111;
+  border: 2px solid #ff66cc;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #ff66cc55;
+}
+
+.album-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.album-images img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ff66cc;
+  border-radius: 5px;
+}
+
+.compilation-grid img {
+  width: 80px;
+  height: 80px;
+}
+
+.album-title {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.album-year {
+  color: #ff66cc;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
