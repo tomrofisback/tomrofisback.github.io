@@ -1,3 +1,7 @@
+/* ------------------------------
+   GLOBAL
+------------------------------ */
+
 body {
   margin: 0;
   padding: 0;
@@ -11,6 +15,10 @@ body {
   margin: auto;
   padding: 20px;
 }
+
+/* ------------------------------
+   IMAGE D'ACCUEIL
+------------------------------ */
 
 .home-image {
   text-align: center;
@@ -26,6 +34,10 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+/* ------------------------------
+   BOUTONS BAS DE PAGE
+------------------------------ */
 
 .bottom-nav {
   margin-top: 40px;
@@ -56,6 +68,10 @@ body {
   box-shadow: 0 0 20px #ff66cc;
 }
 
+/* ------------------------------
+   ICONES RÉSEAUX
+------------------------------ */
+
 .social-link img {
   width: 40px;
   height: 40px;
@@ -64,7 +80,10 @@ body {
   display: inline-block;
 }
 
-/* Animation texte néon */
+/* ------------------------------
+   ANIMATION TEXTE NÉON
+------------------------------ */
+
 @keyframes neonText {
   0% { text-shadow: 0 0 10px #ff66cc; }
   50% { text-shadow: 0 0 25px #ff66cc; }
