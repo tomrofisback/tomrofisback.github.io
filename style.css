@@ -16,13 +16,6 @@ body {
   text-align: center;
 }
 
-.page-title {
-  color: #ff66cc;
-  text-shadow: 0 0 15px #ff66cc;
-  animation: neonText 2s infinite ease-in-out;
-  margin-bottom: 20px;
-}
-
 .home-image img {
   width: 280px;
   height: auto;
@@ -110,6 +103,7 @@ body {
   50% { box-shadow: 0 0 25px #ff66cc; }
   100% { box-shadow: 0 0 10px #ff66cc; }
 }
+
 
 
 
