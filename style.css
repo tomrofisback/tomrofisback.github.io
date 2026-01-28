@@ -96,4 +96,12 @@ body {
   100% { box-shadow: 0 0 10px #ff66cc; }
 }
 
+.neon-frame {
+  border: 3px solid #ff66cc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px #ff66cc;
+  animation: neonFrame 2s infinite ease-in-out;
+}
+
 
