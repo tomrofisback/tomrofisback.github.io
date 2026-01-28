@@ -63,3 +63,31 @@ body {
   50% { text-shadow: 0 0 25px #ff66cc; }
   100% { text-shadow: 0 0 10px #ff66cc; }
 }
+/* --- FOND DE PAGE BIO --- */
+.bio-page {
+  background-image: url("photo-accueil.jpg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 40px 20px;
+}
+
+/* --- CADRE QUI CLIGNOTE POUR LE TEXTE BIO --- */
+.bio-box {
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid #ff66cc;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 20px #ff66cc;
+  animation: neonFrame 2s infinite ease-in-out;
+}
+
+/* Animation du cadre */
+@keyframes neonFrame {
+  0% { box-shadow: 0 0 10px #ff66cc; }
+  50% { box-shadow: 0 0 30px #ff66cc; }
+  100% { box-shadow: 0 0 10px #ff66cc; }
+}
+
