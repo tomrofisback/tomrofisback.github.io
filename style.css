@@ -90,4 +90,10 @@ body {
   50% { box-shadow: 0 0 30px #ff66cc; }
   100% { box-shadow: 0 0 10px #ff66cc; }
 }
+@keyframes neonFrame {
+  0% { box-shadow: 0 0 10px #ff66cc; }
+  50% { box-shadow: 0 0 30px #ff66cc; }
+  100% { box-shadow: 0 0 10px #ff66cc; }
+}
+
 
