@@ -43,8 +43,10 @@ body {
   border-radius: 8px;
   font-weight: bold;
   box-shadow: 0 0 10px #ff66cc;
+  transition: 0.2s;
   animation: neonText 2s infinite ease-in-out;
 }
+
 
 .neon-btn:hover {
   background: #ff66cc;
@@ -103,5 +105,11 @@ body {
   box-shadow: 0 0 15px #ff66cc;
   animation: neonFrame 2s infinite ease-in-out;
 }
+@keyframes neonFrame {
+  0% { box-shadow: 0 0 10px #ff66cc; }
+  50% { box-shadow: 0 0 25px #ff66cc; }
+  100% { box-shadow: 0 0 10px #ff66cc; }
+}
+
 
 
