@@ -14,7 +14,7 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
-  min-height: 40vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -31,8 +31,13 @@ body {
 .accueil-page {
   background-image: url("photo-accueil.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.accueil-page .content-main {
+  min-height: 35vh; /* hauteur réduite */
 }
 
 .bio-page {
@@ -168,7 +173,7 @@ body {
   animation: neonText 2s infinite ease-in-out;
 }
 
-/* Lightbox (images agrandies) */
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -240,5 +245,3 @@ body {
   font-size: 12px;
   color: #ccc;
 }
-
-
