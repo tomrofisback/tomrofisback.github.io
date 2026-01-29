@@ -39,7 +39,7 @@ body {
 
 /* Hauteur visuelle de la zone d’accueil */
 .accueil-page .content-main {
-  min-height: 30vh; /* tu peux monter à 35vh si tu veux un peu plus grand */
+  min-height: 25vh; /* tu peux monter à 35vh si tu veux un peu plus grand */
 }
 
 /* Bio : fond plein écran, style “cover” */
@@ -248,3 +248,4 @@ body {
   font-size: 12px;
   color: #ccc;
 }
+
