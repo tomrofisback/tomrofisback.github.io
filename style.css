@@ -1,4 +1,6 @@
-/* GLOBAL */
+/* ------------------------------
+   GLOBAL
+------------------------------ */
 
 body {
   margin: 0;
@@ -18,11 +20,13 @@ body {
 }
 
 .content-main {
-  text-align: center;
   flex: 1;
+  text-align: center;
 }
 
-/* ANIMATIONS NÉON */
+/* ------------------------------
+   ANIMATIONS NÉON
+------------------------------ */
 
 @keyframes neonText {
   0% { text-shadow: 0 0 10px #ff66cc; }
@@ -36,27 +40,9 @@ body {
   100% { box-shadow: 0 0 10px #ff66cc; }
 }
 
-/* PAGES SPÉCIFIQUES */
-
-.accueil-page {
-  background-image: url("photo-accueil.jpg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.bio-page {
-  background-image: url("photo-accueil.jpg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.contact-page {
-  background: #000;
-}
-
-/* BOUTONS NÉON */
+/* ------------------------------
+   BOUTONS NÉON
+------------------------------ */
 
 .neon-btn {
   display: inline-block;
@@ -67,10 +53,8 @@ body {
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  box-shadow: 0 0 10px #ff66cc;
-  transition: 0.2s;
+  background: rgba(0, 0, 0, 0.7);
   animation: neonText 2s infinite ease-in-out, neonFrame 2s infinite ease-in-out;
-  background: rgba(0, 0, 0, 0.7); /* intérieur sombre du bouton */
 }
 
 .neon-btn:hover {
@@ -78,23 +62,27 @@ body {
   color: #000;
 }
 
-/* NAVIGATION BAS DE PAGE */
+/* ------------------------------
+   NAVIGATION BAS DE PAGE
+------------------------------ */
 
 .bottom-nav {
   margin-top: 30px;
-  /* plus de gros rectangle derrière les boutons */
 }
 
 .bottom-buttons {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* ICONES RÉSEAUX + LOGOS */
+/* ------------------------------
+   ICONES RÉSEAUX
+------------------------------ */
 
 .social-links {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
@@ -107,7 +95,9 @@ body {
   border-radius: 6px;
 }
 
-/* BIO */
+/* ------------------------------
+   BIO
+------------------------------ */
 
 .bio-box {
   background: rgba(0, 0, 0, 0.7);
@@ -119,7 +109,9 @@ body {
   animation: neonFrame 2s infinite ease-in-out;
 }
 
-/* DISCOGRAPHIE */
+/* ------------------------------
+   DISCOGRAPHIE
+------------------------------ */
 
 .discography-grid {
   display: grid;
@@ -137,74 +129,54 @@ body {
 
 .album-images {
   display: flex;
-  gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
-.album-images a img,
 .album-images img {
-  width: 120px !important;
-  height: 120px !important;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border: 3px solid #ff66cc;
   border-radius: 10px;
-  box-shadow: 0 0 15px #ff66cc;
   animation: neonFrame 2s infinite ease-in-out;
 }
 
 .album-date {
+  margin-top: 10px;
   color: #ff66cc;
   font-weight: bold;
-  margin-top: 10px;
   animation: neonText 2s infinite ease-in-out;
 }
 
-/* LIGHTBOX */
+/* ------------------------------
+   VIDEOS
+------------------------------ */
 
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(4px);
-  z-index: 9999;
-}
-
-.lightbox:target {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 95%;
-  max-height: 95%;
-  object-fit: contain;
-  border: 3px solid #ff66cc;
+.video-thumb {
+  width: 280px;
   border-radius: 10px;
-  box-shadow: 0 0 25px #ff66cc;
-}
-
-/* VIDEOS */
-
-.video-box {
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  padding: 25px;
+  border: 3px solid #ff66cc;
   animation: neonFrame 2s infinite ease-in-out;
+  margin: 10px;
 }
 
-/* CONTACT */
+/* ------------------------------
+   CONTACT
+------------------------------ */
+
+.contact-page {
+  background: #000;
+}
 
 .lprod-center {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
 }
 
-.lprod-center img.lprod-big {
+.lprod-center img {
   width: 180px;
-  height: auto;
   filter: drop-shadow(0 0 25px #ff66cc);
 }
 
@@ -216,7 +188,9 @@ body {
   animation: neonText 2s infinite ease-in-out;
 }
 
-/* COMPTEUR */
+/* ------------------------------
+   COMPTEUR
+------------------------------ */
 
 .visit-counter {
   margin-top: 15px;
