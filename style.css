@@ -1,6 +1,4 @@
-/* ------------------------------
-   GLOBAL
------------------------------- */
+/* GLOBAL */
 
 body {
   margin: 0;
@@ -14,15 +12,17 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-main {
   text-align: center;
+  flex: 1;
 }
 
-/* ------------------------------
-   ANIMATIONS NÉON
------------------------------- */
+/* ANIMATIONS NÉON */
 
 @keyframes neonText {
   0% { text-shadow: 0 0 10px #ff66cc; }
@@ -36,9 +36,7 @@ body {
   100% { box-shadow: 0 0 10px #ff66cc; }
 }
 
-/* ------------------------------
-   PAGES SPÉCIFIQUES
------------------------------- */
+/* PAGES SPÉCIFIQUES */
 
 .accueil-page {
   background-image: url("photo-accueil.jpg.jpg");
@@ -54,9 +52,11 @@ body {
   background-attachment: fixed;
 }
 
-/* ------------------------------
-   BOUTONS NÉON
------------------------------- */
+.contact-page {
+  background: #000;
+}
+
+/* BOUTONS NÉON */
 
 .neon-btn {
   display: inline-block;
@@ -70,6 +70,7 @@ body {
   box-shadow: 0 0 10px #ff66cc;
   transition: 0.2s;
   animation: neonText 2s infinite ease-in-out, neonFrame 2s infinite ease-in-out;
+  background: rgba(0, 0, 0, 0.7); /* intérieur sombre du bouton */
 }
 
 .neon-btn:hover {
@@ -77,24 +78,18 @@ body {
   color: #000;
 }
 
-/* ------------------------------
-   NAVIGATION BAS DE PAGE
------------------------------- */
+/* NAVIGATION BAS DE PAGE */
 
 .bottom-nav {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 12px;
   margin-top: 30px;
+  /* plus de gros rectangle derrière les boutons */
 }
 
 .bottom-buttons {
   margin-bottom: 10px;
 }
 
-/* ------------------------------
-   ICONES RÉSEAUX + LOGOS
------------------------------- */
+/* ICONES RÉSEAUX + LOGOS */
 
 .social-links {
   display: flex;
@@ -112,9 +107,7 @@ body {
   border-radius: 6px;
 }
 
-/* ------------------------------
-   BIO
------------------------------- */
+/* BIO */
 
 .bio-box {
   background: rgba(0, 0, 0, 0.7);
@@ -126,9 +119,7 @@ body {
   animation: neonFrame 2s infinite ease-in-out;
 }
 
-/* ------------------------------
-   DISCOGRAPHIE
------------------------------- */
+/* DISCOGRAPHIE */
 
 .discography-grid {
   display: grid;
@@ -151,7 +142,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* images petites dans la page */
 .album-images a img,
 .album-images img {
   width: 120px !important;
@@ -170,9 +160,7 @@ body {
   animation: neonText 2s infinite ease-in-out;
 }
 
-/* ------------------------------
-   LIGHTBOX (ZOOM)
------------------------------- */
+/* LIGHTBOX */
 
 .lightbox {
   display: none;
@@ -196,12 +184,9 @@ body {
   border: 3px solid #ff66cc;
   border-radius: 10px;
   box-shadow: 0 0 25px #ff66cc;
-  touch-action: pinch-zoom;
 }
 
-/* ------------------------------
-   VIDEOS
------------------------------- */
+/* VIDEOS */
 
 .video-box {
   background: rgba(0, 0, 0, 0.7);
@@ -210,38 +195,8 @@ body {
   animation: neonFrame 2s infinite ease-in-out;
 }
 
-/* ------------------------------
-   CONTACT
------------------------------- */
+/* CONTACT */
 
-.contact-box {
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  padding: 25px;
-  animation: neonFrame 2s infinite ease-in-out;
-}
-
-/* ------------------------------
-   COMPTEUR
------------------------------- */
-
-.visit-counter {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 12px;
-  color: #ccc;
-}
-/* Logo LProduction plus grand uniquement sur la page Contact */
-.contact-page .social-link img.lprod {
-  width: 70px;
-  height: 70px;
-}
-/* Page Contact minimaliste */
-.contact-page {
-  background: #000;
-}
-
-/* Logo centré et grand */
 .lprod-center {
   margin-top: 80px;
   text-align: center;
@@ -253,7 +208,6 @@ body {
   filter: drop-shadow(0 0 25px #ff66cc);
 }
 
-/* Texte sous le logo */
 .click-text {
   margin-top: 15px;
   color: #ff66cc;
@@ -262,4 +216,11 @@ body {
   animation: neonText 2s infinite ease-in-out;
 }
 
+/* COMPTEUR */
 
+.visit-counter {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #ccc;
+}
