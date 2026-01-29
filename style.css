@@ -292,4 +292,30 @@ body {
     color: #ff66cc;
     text-decoration: underline;
 }
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    background-color: #000;
+}
+
+.footer-logos a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-logos img {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+    filter: drop-shadow(0 0 5px #ff66cc);
+}
+
+.footer-logos a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
 
