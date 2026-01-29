@@ -14,7 +14,7 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
-  min-height: 50vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
 }
@@ -240,4 +240,5 @@ body {
   font-size: 12px;
   color: #ccc;
 }
+
 
