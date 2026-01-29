@@ -28,18 +28,21 @@ body {
    BACKGROUNDS
 ----------------------------------- */
 
+/* Accueil : image non zoomée, taille raisonnable */
 .accueil-page {
   background-image: url("photo-accueil.jpg");
-  background-size: cover;
+  background-size: contain;      /* l’image garde sa taille, ne remplit pas tout */
   background-position: center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll; /* pas d’effet de zoom */
 }
 
+/* Hauteur visuelle de la zone d’accueil */
 .accueil-page .content-main {
-  min-height: 35vh; /* hauteur réduite */
+  min-height: 30vh; /* tu peux monter à 35vh si tu veux un peu plus grand */
 }
 
+/* Bio : fond plein écran, style “cover” */
 .bio-page {
   background-image: url("photo-accueil.jpg");
   background-size: cover;
