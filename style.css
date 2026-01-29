@@ -231,3 +231,9 @@ body {
   font-size: 12px;
   color: #ccc;
 }
+/* Logo LProduction plus grand uniquement sur la page Contact */
+.contact-page .social-link img.lprod {
+  width: 70px;
+  height: 70px;
+}
+
