@@ -317,5 +317,43 @@ body {
     transform: scale(1.1);
     opacity: 0.8;
 }
+/* MENU BAS IDENTIQUE AUX AUTRES PAGES */
+.main-nav {
+  margin-top: 30px;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ff66cc;
+  border: 2px solid #ff66cc;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.7);
+  animation: neonText 2s infinite ease-in-out, neonFrame 2s infinite ease-in-out;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: #ff66cc;
+  color: #000;
+}
+
 
 
