@@ -7,16 +7,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <div class="visit-counter">
-    Visites : <span id="visits"></span>
+    Visites : <span id="visits">...</span>
 </div>
 
 <script>
-fetch("https://api.countapi.xyz/hit/tomrof-site/visites")
+fetch("https://api.countapi.xyz/hit/tomrof-counter/global")
   .then(response => response.json())
   .then(data => {
     document.getElementById("visits").innerText = String(data.value).padStart(5, '0');
+  })
+  .catch(err => {
+    document.getElementById("visits").innerText = "ERREUR";
+    console.log(err);
   });
 </script>
+
 
 <body class="accueil-page">
 
@@ -61,5 +66,6 @@ fetch("https://api.countapi.xyz/hit/tomrof-site/visites")
 
 </body>
 </html>
+
 
 
