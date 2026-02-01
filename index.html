@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
+<div class="visit-counter">
+    Visites : <span id="visits"></span>
+</div>
+
+<script>
+fetch("https://api.countapi.xyz/hit/tomrof-site/visites")
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("visits").innerText = String(data.value).padStart(5, '0');
+  });
+</script>
 
 <body class="accueil-page">
 
@@ -50,4 +61,5 @@
 
 </body>
 </html>
+
 
