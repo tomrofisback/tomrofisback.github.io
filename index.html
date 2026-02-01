@@ -10,11 +10,10 @@
 fetch("https://api.github.com/repos/tomrofisback/tomrofisback.github.io/dispatches", {
   method: "POST",
   headers: {
-    "Accept": "application/vnd.github+json",
-    "Authorization": "Bearer {{TOKEN}}"
+    "Accept": "application/vnd.github+json"
   },
   body: JSON.stringify({
-    event_type: "increment"
+    event_type: "trigger_increment"
   })
 });
 </script>
@@ -63,6 +62,7 @@ fetch("https://api.github.com/repos/tomrofisback/tomrofisback.github.io/dispatch
 
 </body>
 </html>
+
 
 
 
