@@ -11,16 +11,17 @@
 </div>
 
 <script>
-fetch("https://api.countapi.xyz/hit/tomrof-counter/global")
-  .then(response => response.json())
+fetch("https://hits.sh/tomrof.fr.json")
+  .then(r => r.json())
   .then(data => {
-    document.getElementById("visits").innerText = String(data.value).padStart(5, '0');
+    document.getElementById("visits").innerText = String(data.hits).padStart(5, '0');
   })
   .catch(err => {
     document.getElementById("visits").innerText = "ERREUR";
     console.log(err);
   });
 </script>
+
 
 
 <body class="accueil-page">
@@ -66,6 +67,7 @@ fetch("https://api.countapi.xyz/hit/tomrof-counter/global")
 
 </body>
 </html>
+
 
 
 
