@@ -2,10 +2,6 @@ name: Update Counter
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   update:
@@ -14,6 +10,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
@@ -28,13 +26,16 @@ jobs:
         id: inc
         run: |
           newcount=$(( ${{ steps.read.outputs.count }} + 1 ))
-          echo "newcount=$newcount" >> $GITHUB_OUTPUT
           echo "{ \"visites\": $newcount }" > compteur.json
+          echo "newcount=$newcount" >> $GITHUB_OUTPUT
 
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add compteur.json
-          git commit -m "Increment counter to ${{ steps.inc.outputs.newcount }}" || echo "No changes"
-          git push
+          git commit -m "Increment counter to ${{ steps.inc.outputs.newcount }}" || echo "No changes to commit"
+
+      - name: Push changes
+        run: |
+          git push || echo "Push failed but workflow continues"
