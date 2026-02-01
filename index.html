@@ -11,45 +11,16 @@
 </div>
 
 <script>
-async function updateCounter() {
-    const repo = "tomrof/tomrof.github.io"; // ton dépôt
-    const file = "compteur.json";
-
-    // 1. Récupérer le fichier compteur depuis GitHub
-    const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/${file}`);
-    const data = await res.json();
-
-    // 2. Incrémenter
-    const newCount = data.visites + 1;
-
-    // 3. Afficher
-    document.getElementById("visits").innerText = String(newCount).padStart(5, '0');
-
-    // 4. Envoyer la mise à jour vers GitHub via l’API
-    fetch(`https://api.github.com/repos/${repo}/contents/${file}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "token GITHUB_TOKEN_ICI"
-        },
-        body: JSON.stringify({
-            message: "update counter",
-            content: btoa(JSON.stringify({ visites: newCount }, null, 2)),
-            sha: await getSha(repo, file)
-        })
-    });
-}
-
-async function getSha(repo, file) {
-    const res = await fetch(`https://api.github.com/repos/${repo}/contents/${file}`);
-    const json = await res.json();
-    return json.sha;
-}
-
-updateCounter();
+fetch("https://api.ezcount.online/tomrof.fr")
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("visits").innerText = String(data.count).padStart(5, '0');
+  })
+  .catch(err => {
+    document.getElementById("visits").innerText = "ERREUR";
+    console.log(err);
+  });
 </script>
-
-
 
 <body class="accueil-page">
 
@@ -94,6 +65,7 @@ updateCounter();
 
 </body>
 </html>
+
 
 
 
