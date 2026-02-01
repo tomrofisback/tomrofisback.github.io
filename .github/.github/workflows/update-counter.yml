@@ -1,1 +1,38 @@
+name: Update Counter
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Read compteur.json
+        id: read
+        run: |
+          count=$(jq '.visites' compteur.json)
+          echo "count=$count" >> $GITHUB_OUTPUT
+
+      - name: Increment counter
+        id: inc
+        run: |
+          newcount=$(( ${{ steps.read.outputs.count }} + 1 ))
+          echo "newcount=$newcount" >> $GITHUB_OUTPUT
+          echo "{ \"visites\": $newcount }" > compteur.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add compteur.json
+          git commit -m "Increment counter to ${{ steps.inc.outputs.newcount }}" || echo "No changes"
+          git push
 
